@@ -32,14 +32,14 @@ header{
     justify-content:space-between;
     align-items:center;
 
-    padding:20px 40px;
+    padding:0 40px;
     min-height:500px;
 }
 
 .logo-left{
     position:absolute;
     left:25px;
-    top:15px;
+    top:-80px;
     width:250px;
     height:auto;
 }
@@ -47,7 +47,7 @@ header{
 .logo-right{
     position:absolute;
     right:25px;
-    top:15px;
+    top:-80px;
     width:250px;
     height:auto;
 }
@@ -276,17 +276,22 @@ header{
     justify-content:space-between;
     align-items:center;
 
-    padding:20px 40px;
+    padding: 0 40px;
 }
 .center-logo{
     flex:1;
     text-align:center;
+
+    position:relative;
+    top:-120px; /* підняти вище */
 }
 
 .center-logo img{
-    max-height:500px;
+    max-height:600px;
     width:auto;
+
     display:block;
+    margin:0 auto; /* ідеально по центру */
 }
 .side-logos{
     display:flex;
@@ -297,10 +302,10 @@ header{
     width:270px;
     height:270px;
     object-fit:contain;
-
-    object-fit:contain;
-
     display:block;
+
+    position:relative;
+    top:-80px;
 }
 .small-logo{
     transform:scale(0.63);
