@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Корпус ДШВ</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+
+    <div class="side-logos left-side">
+        <img src="images/Sign25.png">
+        <img src="images/Sign77.png">
+        <img src="images/Sign78.png">
+        <img src="images/Sign79.png">
+        <img src="images/Sign81.png">
+    </div>
+
+    <div class="center-logo">
+        <img src="images/7corpsAAF.png">
+    </div>
+
+    <div class="side-logos right-side">
+        <img src="images/Sign147.png">
+        <img src="images/Sign132.png">
+        <img src="images/Sign87.png">
+        <img src="images/Sign231.png">
+        <img src="images/sign237.png" class="small-logo">
+    </div>
+
+</header>
+
+<div class="main-content">
+
+    <!-- ЛІВА ЧАСТИНА -->
+    <div class="stats-section">
+
+        <div class="flight-stats">
+
+            <div class="flight-card">
+
+                <span class="flight-title">
+                    Ударні вильоти за добу
+                </span>
+
+                <span
+                    class="flight-value"
+                    id="strikeFlights"
+                >
+                    0
+                </span>
+
+            </div>
+
+            <div class="flight-card">
+
+                <span class="flight-title">
+                    Розвідувальні вильоти за добу
+                </span>
+
+                <span
+                    class="flight-value"
+                    id="reconFlights"
+                >
+                    0
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="stats-header">
+
+            <div class="header-left"></div>
+
+            <div class="header-numbers">
+
+                <span class="header-hit">
+                    УРАЖЕНО
+                </span>
+
+                <span class="header-destroyed">
+                    ЗНИЩЕНО
+                </span>
+
+            </div>
+
+        </div>
+
+        <div id="statsContainer" class="stats-grid"></div>
+
+        <div class="summary">
+
+            Загальна кількість цілей:
+
+            <span id="totalTargets">
+                0
+            </span>
+
+        </div>
+
+        <div id="editor" class="editor hidden"></div>
+
+    </div>
+
+    <!-- ПРАВА ЧАСТИНА -->
+    <div class="chart-section">
+
+        <div class="flight-stats">
+
+            <div class="flight-card">
+
+                <span class="flight-title">
+                    Ударні вильоти за весь період
+                </span>
+
+                <span
+                    class="flight-value"
+                    id="strikeFlightsTotal"
+                >
+                    0
+                </span>
+
+            </div>
+
+            <div class="flight-card">
+
+                <span class="flight-title">
+                    Розвідувальні вильоти за весь період
+                </span>
+
+                <span
+                    class="flight-value"
+                    id="reconFlightsTotal"
+                >
+                    0
+                </span>
+
+            </div>
+
+        </div>
+
+        <canvas
+            id="statsChart"
+            width="1600"
+            height="1000">
+        </canvas>
+
+    </div>
+
+</div>
+
+<footer>
+
+    <span id="lastUpdate"></span>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

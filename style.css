@@ -1,0 +1,480 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0d0d0d;
+    color:white;
+    position:relative;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background-image:url("images/7corps.png");
+
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+
+    opacity:0.15;
+
+    z-index:-1;
+}
+
+.side-logos{
+    margin-top:-230px;
+}
+
+.center-logo{
+    margin-top:-230px;
+}
+
+.logo-left{
+    position:absolute;
+    left:25px;
+    top:15px;
+    width:250px;
+    height:auto;
+}
+
+.logo-right{
+    position:absolute;
+    right:25px;
+    top:15px;
+    width:250px;
+    height:auto;
+}
+
+header h1{
+    font-size:34px;
+    color:rgb(249, 246, 246);
+}
+
+header p{
+    margin-top:10px;
+    color:#fbf8f8;
+}
+
+.container{
+    width:100%;
+    max-width:1800px;
+    margin:0 auto;
+    padding:0 40px;
+}
+
+.value{
+    font-size:42px;
+    font-weight:bold;
+}
+
+.summary{
+    font-size:48px;
+
+    font-weight:900;
+
+    color:#ffffff;
+
+    margin-top:25px;
+
+}
+
+
+.buttons{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    margin-top:25px;
+}
+
+button{
+    background:#6f021d;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#920229;
+}
+
+.editor{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.input-box{
+    background:#1b1b1b;
+    padding:15px;
+    border-radius:10px;
+}
+
+.input-box label{
+    display:block;
+    margin-bottom:8px;
+}
+
+.input-box input{
+    width:100%;
+    padding:10px;
+}
+
+.hidden{
+    display:none;
+}
+
+.chart-box{
+    background:none;
+    padding:0;
+    margin:0;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#aaa;
+}
+
+.target-header{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:10px;
+}
+
+.target-header h3{
+    margin:0;
+    color:rgb(240, 208, 30);
+}
+.stats-grid{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.target-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:12px 15px;
+    margin-bottom:8px;
+
+    border-bottom:1px solid rgba(255,165,0,0.25);
+
+    transition:0.3s;
+}
+
+.target-row:hover{
+    background:rgba(255,165,0,0.08);
+    border-radius:8px;
+}
+
+.target-left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.target-icon{
+    width:80px;
+    height:50px;
+    object-fit:contain;
+
+    filter:
+        drop-shadow:none;
+}
+
+.target-name{
+    font-size:44px;
+
+    font-weight:900;
+
+    color:#ffffff;
+
+    text-shadow:
+        1px 1px 0 #999,
+        2px 2px 0 #777,
+        3px 3px 0 #555,
+        4px 4px 8px rgba(0,0,0,0.8);
+}
+
+.target-values{
+    display:grid;
+
+    grid-template-columns:180px 180px;
+
+    justify-items:center;
+
+    align-items:center;
+
+    gap:40px;
+}
+
+.hit-value{
+    font-size:22px;
+    font-weight:700;
+}
+
+.destroyed-value{
+    font-size:22px;
+    font-weight:700;
+}
+
+.main-content{
+    display:flex;
+
+    gap:40px;
+
+    align-items:stretch;
+}
+
+.stats-section,
+.chart-section{
+    flex:1;
+}
+
+.stats-section{
+    width:50%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+}
+
+.chart-section{
+    width:50%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:auto;
+}
+
+.chart-section canvas{
+    flex:1;
+
+    width:100% !important;
+
+    height:100% !important;
+}
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 40px;
+}
+.center-logo{
+    flex:1;
+    text-align:center;
+}
+
+.center-logo img{
+    max-height:760px;
+    width:auto;
+}
+.side-logos{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+.side-logos img{
+    width:270px;
+    height:270px;
+    object-fit:contain;
+
+    object-fit:contain;
+
+    display:block;
+}
+.small-logo{
+    transform:scale(0.63);
+}
+.flight-stats{
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:30px;
+
+    margin-top:-220px;
+
+    position:relative;
+
+    top:-20px;
+}
+
+.flight-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding:30px 30px;
+
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:100px;
+
+    min-width:460px;
+}
+
+.flight-title{
+    font-size:40px;
+    color:#9d9c9c;
+}
+
+.flight-value{
+    font-size:76px;
+
+    font-weight:900;
+
+    color:#9d9c9c;
+
+
+
+    margin-top:-5px;
+}
+
+.stats-header{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 10px 10px 10px;
+}
+
+.header-left{
+    width:300px;
+}
+
+.target-title{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.header-numbers{
+    display:grid;
+
+    grid-template-columns:180px 280px;
+
+    justify-items:center;
+
+    align-items:center;
+
+    gap:40px;
+}
+.chart-top-stats{
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:30px;
+
+    margin-top:-220px;
+
+    position:relative;
+
+    top:-20px;
+}
+
+.chart-stat-card{
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    padding:12px 24px;
+
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:12px;
+
+    min-width:240px;
+}
+
+.chart-stat-title{
+    font-size:16px;
+
+    color:#bfbfbf;
+
+    margin-bottom:8px;
+}
+
+.chart-stat-value{
+    font-size:36px;
+
+    font-weight:bold;
+
+    color:white;
+}
+.header-hit,
+.header-destroyed{
+    width:120px;
+
+    text-align:center;
+
+    font-size:40px;
+
+    font-weight:900;
+
+    letter-spacing:5px;
+
+    color:#f6f1f1;
+
+}
+.target-name,
+.hit-value,
+.destroyed-value{
+    font-size:44px;
+
+    font-weight:900;
+
+    background:linear-gradient(
+        to bottom,
+        #ffffff,
+        #d7d7d7,
+        #9c9c9c
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 2px 4px rgba(86, 70, 70, 0.829);
+}
+.flight-card,
+.chart-stat-card{
+
+    height:150px;
+
+    justify-content:center;
+}
